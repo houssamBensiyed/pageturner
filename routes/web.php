@@ -76,3 +76,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return "Deleting book with ID: {$id}";
     })->name('books.destroy');
 });
+
+
+/*
+|--------------------------------------------------------------------------
+| Part 4: Fallback Route
+|--------------------------------------------------------------------------
+*/
+
+Route::fallback(function () {
+    return redirect('/');
+});
